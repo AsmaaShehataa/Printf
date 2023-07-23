@@ -183,7 +183,7 @@ int _printf(const char *format, ...)
 			i = i + 1;
 			counteras++;
 		}
-		else if ( format[i] == '%' &&(format[i + 1] == 'd'))
+		/** else if ( format[i] == '%' &&(format[i + 1] == 'd'))
 		{
 			printmycharwrite(va_arg(args, int));
 			//putchar(va_arg(args, int));
@@ -196,7 +196,7 @@ int _printf(const char *format, ...)
 			//putchar(va_arg(args, int));
 			i = i + 1;
 			counteras++;
-		}
+		}*/
 
 		else
 		{
