@@ -41,7 +41,11 @@ char convertdigit(int x)
 		return ('x');
 	}
 }
-
+/**
+ * mynumlen - function that measures the char of arrays length
+ * num1: input variable
+ * Return: a char of array
+*/
 
 int mynumlen(int num1)
 {
@@ -86,8 +90,7 @@ char *convertnumbertocharz(int number1)
 
 	digit = 0;
 
-	do
-	{
+	do {
 		digit = number1 % 10; /* return -ve or +ve numbers */
 
 		/* printf("numnber digit is %d\n", digit); */
