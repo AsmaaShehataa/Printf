@@ -4,8 +4,6 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-
-
 /**
  * printmystrwrite - prints strings using putchar
  * @str: an input variable to  print the string
@@ -27,7 +25,6 @@ int printmystrwrite(char str[])
 	}
 	return (j);
 }
-
 /**
  * printmycharwrite - function prints a char using write
  * @charro: input variable
@@ -39,8 +36,6 @@ int printmycharwrite(char charro)
 
 	return (1);
 }
-
-
 /**
  * _printf - function which prints a string without format specs
  * @format: input variable to print a string
@@ -55,61 +50,40 @@ int _printf(const char *format, ...)
 	int counteras = 0;
 	int strcounter;
 
-
 	if (!format)
 		return (-1);
-
 	va_start(args, format);
-
 	for (i = 0 ; *(format + i) != '\0' ; i++)
 	{
-
+		i++;
 		if (format[i] == '%' && (format[i + 1] == 's'))
 			{
-			/* (va_arg(args, char *));*/
-			i = i + 1; /* to print the character after % */
 			strcounter = printmystrwrite(va_arg(args, char *));
-
-			counteras += strcounter; /* measure string count */
+			counteras += strcounter;
 		}
 		else if (format[i] == '%' && (format[i + 1] == 'c'))
 		{
 			printmycharwrite(va_arg(args, int));
-				/* putchar(va_arg(args, int)); */
-			i = i + 1;
 			counteras++;
 		}
 		else if (format[i] == '%' && (format[i + 1] == '%'))
 		{
 			printmycharwrite('%');
-			i = i + 1;
 			counteras++;
 		}
-		else if (format[i] == '%' && (format[i + 1] == 'd'))
+		else if (format[i] == '%' && (format[i + 1] == 'd' || (format[i] == '%' && (format[i + 1] == 'i'))))
 		{
 			int num = va_arg(args, int);
 			char *iToa = convertnumbertocharz(num);
-
-			i = i + 1; /* to print the character after % */
 			strcounter = printmystrwrite(iToa);
-			counteras += strcounter; /* measure string count */
+			counteras += strcounter;
 		}
-		else if (format[i] == '%' && (format[i + 1] == 'i'))
-		{
-			int num = va_arg(args, int);
-			char *iToa = convertnumbertocharz(num);
-
-			i = i + 1; /* to print the character after % */
-			strcounter = printmystrwrite(iToa);
-			counteras += strcounter; /* measure string count */
-		}
-
 		else
 		{
 			printmycharwrite(format[i]);
 			counteras++;
+			i--;
 		}
-
 	}
 	va_end(args);
 	return (counteras);
