@@ -49,15 +49,14 @@ char convertdigit(int x)
 int mynumlen(int num1)
 {
 	int count = 1;
-	int i = 10;
 
-	while ((num1 / i) != 0)
+	while (num1 != 0)
 	{
-		i = i * 10;
-
+		num1 = num1 / 10;
 		count++;
 	}
 	return (count);
+
 }
 /**
  * convertnumbertocharz - converting number to char

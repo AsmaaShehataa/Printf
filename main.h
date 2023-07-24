@@ -8,10 +8,10 @@
 
 int _printf(const char *format, ...);
 int printmystrwrite(char str[]);
-int print_number(int str[]);
 int printmycharwrite(char charro);
 char convertdigit(int x);
 int mynumlen(int num1);
 char *convertnumbertocharz(int number1);
+void print_number(int n);
 
 #endif
