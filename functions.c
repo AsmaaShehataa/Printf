@@ -9,7 +9,6 @@
  * convertdigit - convert digits to char
  * @x: number will be converted to a char
  * Return: char converted (0) on Success
-
 */
 
 char convertdigit(int x)
@@ -43,7 +42,7 @@ char convertdigit(int x)
 }
 /**
  * mynumlen - function that measures the char of arrays length
- * num1: input variable
+ * @num1: input variable
  * Return: a char of array
 */
 
@@ -81,7 +80,9 @@ char *convertnumbertocharz(int number1)
 	if (number1 < 0)
 	{
 		a = (char *)malloc(sizeof(char) * (i + 1));
-		a[0] = '-';				/* if it is a -ve value by this cond will put a '-' sign in the beg of the arr */
+		a[0] = '-';
+/* if it is a -ve value by this cond will */
+/*put a '-' sign in the beg of the arr */
 		k = i;					/* placeholder for the '-' sign */
 		number1 = number1 * -1; /* -ve values are handled */
 	}
@@ -98,11 +99,12 @@ char *convertnumbertocharz(int number1)
 		/* printf("this is my charr %c\n", mycharz); */
 		number1 = number1 / 10;
 		/* printf("numnber is %d\n", number1); */
-		a[k] = mycharz; /* charr array after completion - should = the function in line 34 to convert number to char */
+		a[k] = mycharz;
+/* charr array after completion - should */
+/*= the function in line 34 to convert number to char */
 		/* printf("this is a of I %c\n", a[k]); */
 		k--;
 	} while (number1 != 0);
-
 	return (a);
 	free(a);
 }
