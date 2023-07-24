@@ -103,6 +103,6 @@ char *convertnumbertocharz(int number1)
 		k--;
 	} while (number1 != 0);
 
-	free(a);
 	return (a);
+	free(a);
 }
