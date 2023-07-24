@@ -7,7 +7,8 @@
 #include <unistd.h>
 
 int _printf(const char *format, ...);
-int printmystrwrite(char str[]);
+//int printmystrwrite(char str[]);
+int print_number(int str[]);
 int printmycharwrite(char charro);
 char convertdigit(int x);
 int mynumlen(int num1);
