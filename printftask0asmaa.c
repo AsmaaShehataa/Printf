@@ -48,7 +48,7 @@ int _printf(const char *format, ...)
 
 	int i, num;
 	int counteras = 0;
-	char *iToa;
+
 
 	if (!format || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
@@ -59,8 +59,8 @@ int _printf(const char *format, ...)
 		if (format[i] == '%' && (format[i + 1] == 'd' || (format[i + 1] == 'i')))
 		{
 			num = va_arg(args, int);
-			iToa = convertnumbertocharz(num);
-			counteras += printmystrwrite(iToa);
+			print_number(num);
+			counteras += mynumlen(num);
 
 			i = i + 1;
 		}
