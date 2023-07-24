@@ -46,44 +46,41 @@ int _printf(const char *format, ...)
 {
 	va_list args;
 
-	int i;
+	int i, num;
 	int counteras = 0;
-	int strcounter;
+	char *iToa;
 
 	if (!format)
 		return (-1);
+
 	va_start(args, format);
 	for (i = 0 ; *(format + i) != '\0' ; i++)
 	{
-		i++;
-		if (format[i] == '%' && (format[i + 1] == 's'))
+		if (format[i] == '%' && (format[i + 1] == 'd' || (format[i + 1] == 'i')))
+		{
+			num = va_arg(args, int);
+			iToa = convertnumbertocharz(num);
+			counteras += printmystrwrite(iToa);
+
+			i = i + 1;
+		}
+		else if (format[i] == '%' && (format[i + 1] == 's'))
 			{
-			strcounter = printmystrwrite(va_arg(args, char *));
-			counteras += strcounter;
+			counteras += printmystrwrite(va_arg(args, char *));
+			i = i + 1;
 		}
 		else if (format[i] == '%' && (format[i + 1] == 'c'))
 		{
-			printmycharwrite(va_arg(args, int));
-			counteras++;
+			counteras += printmycharwrite(va_arg(args, int));
+			i = i + 1;
 		}
 		else if (format[i] == '%' && (format[i + 1] == '%'))
 		{
-			printmycharwrite('%');
-			counteras++;
-		}
-		else if (format[i] == '%' && (format[i + 1] == 'd' || (format[i] == '%' && (format[i + 1] == 'i'))))
-		{
-			int num = va_arg(args, int);
-			char *iToa = convertnumbertocharz(num);
-			strcounter = printmystrwrite(iToa);
-			counteras += strcounter;
+			counteras += printmycharwrite('%');
+			i = i + 1;
 		}
 		else
-		{
-			printmycharwrite(format[i]);
-			counteras++;
-			i--;
-		}
+			counteras += printmycharwrite(format[i]);
 	}
 	va_end(args);
 	return (counteras);
