@@ -6,9 +6,11 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-/* Conversion specifier functions */
 int _printf(const char *format, ...);
 int printmystrwrite(char str[]);
 int printmycharwrite(char charro);
+char convertdigit(int x);
+int mynumlen(int num1);
+char *convertnumbertocharz(int number1);
 
 #endif
