@@ -50,7 +50,7 @@ int _printf(const char *format, ...)
 	int counteras = 0;
 	char *iToa;
 
-	if (!format)
+	if (!format || (format[0] == "%" && format[1] == "\0"))
 		return (-1);
 
 	va_start(args, format);
