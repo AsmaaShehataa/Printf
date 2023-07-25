@@ -48,13 +48,15 @@ char convertdigit(int x)
 
 int mynumlen(int num1)
 {
-	int count = 1;
+	int count = 0;
 
-	while (num1 != 0)
-	{
+	if (num1 < 0)
+		count++; /* Handle - sign */
+
+	do {
 		num1 = num1 / 10;
 		count++;
-	}
+	} while (num1 != 0);
 	return (count);
 
 }
