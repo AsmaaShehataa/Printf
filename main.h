@@ -10,7 +10,8 @@
 
 int _printf(const char *format, ...);
 int printmystrwrite(char str[]);
-int printmycharwrite(char charro);
+int printmycharwrite(va_list types, char buffer[],
+	int flags, int width, int precision, int size););
 char convertdigit(int x);
 int mynumlen(int num1);
 char *convertnumbertocharz(int number1);
