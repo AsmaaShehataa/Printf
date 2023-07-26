@@ -9,7 +9,7 @@
  * Description: print_int uses a local buffer of 1024 to call write
  * as little as possible
  */
-int print_int(char c)
+int myprint(char c)
 {
 	static char buf[1024];
 	static int i;
