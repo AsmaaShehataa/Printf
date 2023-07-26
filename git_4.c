@@ -2,8 +2,8 @@
 #include <unistd.h>
 
 /**
- * myprint - writes the character c to stdout
- * @c: The character to print
+ * myprint - handle the character buffer to stdout.
+ * @c: The input variable
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  * Description: print_int uses a local buffer of 1024 to call write
@@ -26,4 +26,3 @@ int myprint(char c)
 	}
 	return (1);
 }
-

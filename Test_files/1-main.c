@@ -17,8 +17,8 @@ int main(void)
 {
 	//int len;
 	//int len2;
-	//char name[] = "Asmaa";
-	//char g = 'A';
+	char name[] = "Asmaa";
+	char g = 'A';
 	//int mynum = 36912;
 
 	//int num = 3;
@@ -46,6 +46,7 @@ int main(void)
 
 	char* dd = convertnumbertocharz(56789);
 
+
 	printf("%s\n", dd);
 	_printf("%s\n", dd);
 
@@ -70,8 +71,8 @@ int main(void)
 // 	int checkptf3 = printf("%d : %d\n", num2, num3);
 
 	
-// 	_printf("my name is %s\n", name);
-// 	_printf("my grade is  %c\n", g);
+ 	_printf("my name is %s\n", name);
+ 	_printf("my grade is  %c\n", g);
 // 	_printf("my grade%% is %%\n");
 // 	return (0);
 }
