@@ -60,7 +60,7 @@ int _printf(const char *format, ...)
 		}
 		else if (format[i] == '%' && (format[i + 1] == 'b'))
 		{
-			counteras += print_binary(va_arg(args, int));
+			counteras += print_binary(va_arg(args, unsigned int));
 			i = i + 1;
 		}
 		else if (format[i] == '%' && (format[i + 1] == 's'))

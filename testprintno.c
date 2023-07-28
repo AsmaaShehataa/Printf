@@ -32,7 +32,7 @@ int print_number(int n)
  * @n: integer to be printed
  * Return: the binary number
  */
-int print_binary(int n)
+int print_binary(unsigned int n)
 {
 	unsigned int num;
 
@@ -58,7 +58,7 @@ int print_binary(int n)
  * Return: the len binary number
  */
 
-int my_bin_len(int num1)
+int my_bin_len(unsigned int num1)
 {
 	int count = 0;
 
