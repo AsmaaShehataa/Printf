@@ -3,8 +3,9 @@
 /**
  * print_number - prints an integer
  * @n: integer to be printed
+ * Return: the integer
  */
-void print_number(int n)
+int print_number(int n)
 {
 	unsigned int num;
 
@@ -23,4 +24,5 @@ void print_number(int n)
 		print_number(num / 10);
 	}
 	printmycharwrite((num % 10) + '0');
+	return (mynumlen(n));
 }

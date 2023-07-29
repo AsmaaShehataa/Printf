@@ -13,7 +13,8 @@ int printmycharwrite(char charro);
 char convertdigit(int x);
 int mynumlen(int num1);
 char *convertnumbertocharz(int number1);
-void print_number(int n);
-int myprint(char c);
+int print_number(int n);
+int my_bin_len(unsigned int num1);
+int print_binary(unsigned int n);
 
 #endif
