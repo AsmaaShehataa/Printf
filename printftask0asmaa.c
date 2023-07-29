@@ -46,7 +46,8 @@ int _printf(const char *format, ...)
 {
 	va_list args;
 
-	int counteras = 0, i = 0;
+	int counteras = 0;
+	int i = 0;
 
 	if (!format || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
@@ -59,11 +60,6 @@ int _printf(const char *format, ...)
 			counteras += print_number(va_arg(args, int));
 			i = i + 1;
 		}
-		// else if (format[i] == '%' && (format[i + 1] == 'b'))
-		// {
-		// 	counteras += print_binary(va_arg(args, int));
-		// 	i = i + 1;
-		// }
 		else if (format[i] == '%' && (format[i + 1] == 's'))
 			{
 			counteras += printmystrwrite(va_arg(args, char *));
