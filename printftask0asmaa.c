@@ -59,11 +59,11 @@ int _printf(const char *format, ...)
 			counteras += print_number(va_arg(args, int));
 			i = i + 1;
 		}
-		else if (format[i] == '%' && (format[i + 1] == 'b'))
-		{
-			counteras += print_binary(va_arg(args, int));
-			i = i + 1;
-		}
+		// else if (format[i] == '%' && (format[i + 1] == 'b'))
+		// {
+		// 	counteras += print_binary(va_arg(args, int));
+		// 	i = i + 1;
+		// }
 		else if (format[i] == '%' && (format[i + 1] == 's'))
 			{
 			counteras += printmystrwrite(va_arg(args, char *));
