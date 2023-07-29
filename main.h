@@ -15,6 +15,6 @@ int mynumlen(int num1);
 char *convertnumbertocharz(int number1);
 int print_number(int n);
 int print_binary(unsigned int n);
-int my_bin_len(unsigned int num1);
+//int my_bin_len(unsigned int num1);
 
 #endif
