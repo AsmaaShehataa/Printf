@@ -30,27 +30,27 @@ int print_number(int n)
  * @n: integer to be printed
  * Return: the binary number
  */
-int print_binary(unsigned int n)
-{
-	// unsigned int num;
+// int print_binary(unsigned int n)
+// {
+// 	// unsigned int num;
 
-	// if (n < 0)
-	// {
-	// 	num = -n;
-	// 	printmycharwrite('-');
-	// }
-	// else
-	// {
-	// 	num = n;
-	// }
-	// if (num / 2)
-	// {
-	// 	print_binary(num / 2);
-	// }
-	// printmycharwrite((num % 2) + '0');
-	 //return (my_bin_len(n));
-	 return (3);
-}
+// 	// if (n < 0)
+// 	// {
+// 	// 	num = -n;
+// 	// 	printmycharwrite('-');
+// 	// }
+// 	// else
+// 	// {
+// 	// 	num = n;
+// 	// }
+// 	// if (num / 2)
+// 	// {
+// 	// 	print_binary(num / 2);
+// 	// }
+// 	// printmycharwrite((num % 2) + '0');
+// 	 //return (my_bin_len(n));
+// 	 return (3);
+// }
 /**
  * my_bin_len - prints the len of the bin number
  * @num1: integer to be printed
