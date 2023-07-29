@@ -40,26 +40,7 @@ char convertdigit(int x)
 		return ('x');
 	}
 }
-/**
- * mynumlen - function that measures the char of arrays length
- * @num1: input variable
- * Return: a char of array
-*/
 
-int mynumlen(int num1)
-{
-	int count = 0;
-
-	if (num1 < 0)
-		count++; /* Handle - sign */
-
-	do {
-		num1 = num1 / 10;
-		count++;
-	} while (num1 != 0);
-	return (count);
-
-}
 /**
  * convertnumbertocharz - converting number to char
  * @number1: the variable will be converted to a char
